@@ -32,7 +32,7 @@ def create_password(pwd_length: int, options: tuple) -> str:
     return pwd
 
 
-@app.command()
+@app.command(context_settings={"help_option_names": ["-h", "--help"]})
 def main(
     pwd_length: int = typer.Argument(
         12,
